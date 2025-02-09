@@ -13,7 +13,7 @@ if (isset($_POST['register'])) {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user) {
-        echo "<script>alert('Email is already registered!');</script>";
+        echo "<script>alert('Email is already registered!!');</script>";
     } else {
         // Insert new user
         $stmt = $conn->prepare("INSERT INTO users (email, password, role) VALUES (?, ?, ?)");
